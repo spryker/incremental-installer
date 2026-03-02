@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer;
 
 interface IncrementalInstallerDeleterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionDeleteCriteriaTransfer $incrementalInstallerCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer
-     */
     public function deleteIncrementalInstallerCollection(
         IncrementalInstallerCollectionDeleteCriteriaTransfer $incrementalInstallerCollectionDeleteCriteriaTransfer
     ): IncrementalInstallerCollectionResponseTransfer;

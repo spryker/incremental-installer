@@ -20,17 +20,11 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class IncrementalInstallerBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\IncrementalInstaller\Business\Creator\IncrementalInstallerCreatorInterface
-     */
     public function createIncrementalInstallerCreator(): IncrementalInstallerCreatorInterface
     {
         return new IncrementalInstallerCreator($this->getEntityManager());
     }
 
-    /**
-     * @return \Spryker\Zed\IncrementalInstaller\Business\Deleter\IncrementalInstallerDeleterInterface
-     */
     public function createIncrementalInstallerDeleter(): IncrementalInstallerDeleterInterface
     {
         return new IncrementalInstallerDeleter($this->getEntityManager());

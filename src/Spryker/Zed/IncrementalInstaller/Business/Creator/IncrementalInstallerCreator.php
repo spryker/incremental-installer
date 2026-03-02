@@ -15,18 +15,10 @@ use Spryker\Zed\IncrementalInstaller\Persistence\IncrementalInstallerEntityManag
 
 class IncrementalInstallerCreator implements IncrementalInstallerCreatorInterface
 {
-    /**
-     * @param \Spryker\Zed\IncrementalInstaller\Persistence\IncrementalInstallerEntityManagerInterface $incrementalInstallerEntityManager
-     */
     public function __construct(protected IncrementalInstallerEntityManagerInterface $incrementalInstallerEntityManager)
     {
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionRequestTransfer $incrementalInstallerCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer
-     */
     public function createIncrementalInstallerCollection(
         IncrementalInstallerCollectionRequestTransfer $incrementalInstallerCollectionRequestTransfer
     ): IncrementalInstallerCollectionResponseTransfer {

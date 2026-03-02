@@ -33,11 +33,6 @@ class IncrementalInstallerBusinessTester extends Actor
 {
     use _generated\IncrementalInstallerBusinessTesterActions;
 
-    /**
-     * @param string $installerName
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerTransfer|null
-     */
     public function getInstallerByName(string $installerName): ?IncrementalInstallerTransfer
     {
         $incrementalInstallerEntity = SpyIncrementalInstallerQuery::create()
@@ -52,12 +47,6 @@ class IncrementalInstallerBusinessTester extends Actor
             ->fromArray($incrementalInstallerEntity->toArray(), true);
     }
 
-    /**
-     * @param string $installerName
-     * @param int $batch
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerTransfer
-     */
     public function haveIncrementalInstaller(string $installerName, int $batch): IncrementalInstallerTransfer
     {
         $incrementalInstallerEntity = SpyIncrementalInstallerQuery::create()

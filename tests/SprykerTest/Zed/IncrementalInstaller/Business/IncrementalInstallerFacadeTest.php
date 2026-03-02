@@ -49,9 +49,6 @@ class IncrementalInstallerFacadeTest extends Unit
      */
     protected const BATCH_NUMBER = 1;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -59,9 +56,6 @@ class IncrementalInstallerFacadeTest extends Unit
         $this->incrementalInstallerFacade = $this->tester->getFacade();
     }
 
-    /**
-     * @return void
-     */
     public function testCreateIncrementalInstallerCollectionSuccessfullySavesDataToDatabase(): void
     {
         // Arrange
@@ -82,9 +76,6 @@ class IncrementalInstallerFacadeTest extends Unit
         $this->tester->assertEquals(static::BATCH_NUMBER, $installerFromDatabase->getBatch());
     }
 
-    /**
-     * @return void
-     */
     public function testGetIncrementalInstallerCollectionReturnsDataFromDatabase(): void
     {
         // Arrange
@@ -100,9 +91,6 @@ class IncrementalInstallerFacadeTest extends Unit
         $this->tester->assertTrue($incrementalInstallerCollectionTransfer->getIncrementalInstallers()->count() > 0);
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteIncrementalInstallerCollectionSuccessfullyDeletesRowsFromDatabase(): void
     {
         // Arrange

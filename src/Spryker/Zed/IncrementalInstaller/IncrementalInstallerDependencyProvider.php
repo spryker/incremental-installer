@@ -20,11 +20,6 @@ class IncrementalInstallerDependencyProvider extends AbstractBundleDependencyPro
      */
     public const PLUGINS_INCREMENTAL_INSTALLER = 'PLUGINS_INCREMENTAL_INSTALLER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -34,11 +29,6 @@ class IncrementalInstallerDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addIncrementalInstallerPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_INCREMENTAL_INSTALLER, function () {

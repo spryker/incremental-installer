@@ -17,16 +17,8 @@ interface IncrementalInstallerRepositoryInterface
      */
     public function getExecutedInstallers(): array;
 
-    /**
-     * @return int
-     */
     public function getLastBatch(): int;
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCriteriaTransfer $incrementalInstallerCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionTransfer
-     */
     public function getIncrementalInstallerCollection(
         IncrementalInstallerCriteriaTransfer $incrementalInstallerCriteriaTransfer
     ): IncrementalInstallerCollectionTransfer;

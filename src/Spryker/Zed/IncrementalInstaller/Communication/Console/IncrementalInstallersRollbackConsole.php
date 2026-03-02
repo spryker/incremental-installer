@@ -59,9 +59,6 @@ class IncrementalInstallersRollbackConsole extends Console
      */
     protected const ERROR_MESSAGE_PLACEHOLDER = 'Installer: %s, Error: %s';
 
-    /**
-     * @return void
-     */
     public function configure(): void
     {
         $this
@@ -70,12 +67,6 @@ class IncrementalInstallersRollbackConsole extends Console
             ->addOption(static::OPT_DRY_RUN, null, InputOption::VALUE_NONE, 'Do not rollback installers');
     }
 
-    /**
-     * @param \Symfony\Component\Console\Input\InputInterface $input
-     * @param \Symfony\Component\Console\Output\OutputInterface $output
-     *
-     * @return int
-     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $dryRun = $input->getOption(static::OPT_DRY_RUN);

@@ -13,12 +13,6 @@ use Orm\Zed\IncrementalInstaller\Persistence\SpyIncrementalInstaller;
 
 class IncrementalInstallerMapper
 {
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerTransfer $incrementalInstallerTransfer
-     * @param \Orm\Zed\IncrementalInstaller\Persistence\SpyIncrementalInstaller $incrementalInstallerEntity
-     *
-     * @return \Orm\Zed\IncrementalInstaller\Persistence\SpyIncrementalInstaller
-     */
     public function mapIncrementalInstallerTransferToIncrementalInstallerEntity(
         IncrementalInstallerTransfer $incrementalInstallerTransfer,
         SpyIncrementalInstaller $incrementalInstallerEntity
@@ -48,12 +42,6 @@ class IncrementalInstallerMapper
         return $incrementalInstallerCollectionTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\IncrementalInstaller\Persistence\SpyIncrementalInstaller $incrementalInstallerEntity
-     * @param \Generated\Shared\Transfer\IncrementalInstallerTransfer $incrementalInstallerTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerTransfer
-     */
     protected function mapIncrementalInstallerEntityToIncrementalInstallerTransfer(
         SpyIncrementalInstaller $incrementalInstallerEntity,
         IncrementalInstallerTransfer $incrementalInstallerTransfer

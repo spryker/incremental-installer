@@ -13,18 +13,10 @@ use Spryker\Zed\IncrementalInstaller\Persistence\IncrementalInstallerEntityManag
 
 class IncrementalInstallerDeleter implements IncrementalInstallerDeleterInterface
 {
-    /**
-     * @param \Spryker\Zed\IncrementalInstaller\Persistence\IncrementalInstallerEntityManagerInterface $incrementalInstallerEntityManager
-     */
     public function __construct(protected IncrementalInstallerEntityManagerInterface $incrementalInstallerEntityManager)
     {
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionDeleteCriteriaTransfer $incrementalInstallerCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer
-     */
     public function deleteIncrementalInstallerCollection(
         IncrementalInstallerCollectionDeleteCriteriaTransfer $incrementalInstallerCollectionDeleteCriteriaTransfer
     ): IncrementalInstallerCollectionResponseTransfer {

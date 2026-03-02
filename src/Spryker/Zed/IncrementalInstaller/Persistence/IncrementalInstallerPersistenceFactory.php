@@ -18,17 +18,11 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class IncrementalInstallerPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\IncrementalInstaller\Persistence\SpyIncrementalInstallerQuery
-     */
     public function createIncrementalInstallerPropelQuery(): SpyIncrementalInstallerQuery
     {
         return SpyIncrementalInstallerQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\IncrementalInstaller\Persistence\Propel\Mapper\IncrementalInstallerMapper
-     */
     public function createIncrementalInstallerMapper(): IncrementalInstallerMapper
     {
         return new IncrementalInstallerMapper();

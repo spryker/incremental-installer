@@ -30,9 +30,6 @@ class IncrementalInstallerRepository extends AbstractRepository implements Incre
             ->getData();
     }
 
-    /**
-     * @return int
-     */
     public function getLastBatch(): int
     {
         /** @var int|null $lastBatch */
@@ -45,11 +42,6 @@ class IncrementalInstallerRepository extends AbstractRepository implements Incre
         return $lastBatch ?? 0;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCriteriaTransfer $incrementalInstallerCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionTransfer
-     */
     public function getIncrementalInstallerCollection(
         IncrementalInstallerCriteriaTransfer $incrementalInstallerCriteriaTransfer
     ): IncrementalInstallerCollectionTransfer {

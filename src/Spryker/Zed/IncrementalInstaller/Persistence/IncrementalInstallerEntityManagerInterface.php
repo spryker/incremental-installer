@@ -12,18 +12,8 @@ use Generated\Shared\Transfer\IncrementalInstallerTransfer;
 
 interface IncrementalInstallerEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerTransfer $incrementalInstallerTransfer
-     *
-     * @return void
-     */
     public function createIncrementalInstaller(IncrementalInstallerTransfer $incrementalInstallerTransfer): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionDeleteCriteriaTransfer $incremetalInstallerCollectionDeleteCriteriaTransfer
-     *
-     * @return void
-     */
     public function deleteIncrementalInstallerCollection(
         IncrementalInstallerCollectionDeleteCriteriaTransfer $incremetalInstallerCollectionDeleteCriteriaTransfer
     ): void;

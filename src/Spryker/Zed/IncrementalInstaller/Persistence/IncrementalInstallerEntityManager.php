@@ -17,11 +17,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class IncrementalInstallerEntityManager extends AbstractEntityManager implements IncrementalInstallerEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerTransfer $incrementalInstallerTransfer
-     *
-     * @return void
-     */
     public function createIncrementalInstaller(IncrementalInstallerTransfer $incrementalInstallerTransfer): void
     {
         /** @var string $installerName */
@@ -37,11 +32,6 @@ class IncrementalInstallerEntityManager extends AbstractEntityManager implements
             ->save();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionDeleteCriteriaTransfer $incremetalInstallerCollectionDeleteCriteriaTransfer
-     *
-     * @return void
-     */
     public function deleteIncrementalInstallerCollection(
         IncrementalInstallerCollectionDeleteCriteriaTransfer $incremetalInstallerCollectionDeleteCriteriaTransfer
     ): void {

@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer;
 
 interface IncrementalInstallerCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\IncrementalInstallerCollectionRequestTransfer $incrementalInstallerCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\IncrementalInstallerCollectionResponseTransfer
-     */
     public function createIncrementalInstallerCollection(
         IncrementalInstallerCollectionRequestTransfer $incrementalInstallerCollectionRequestTransfer
     ): IncrementalInstallerCollectionResponseTransfer;
